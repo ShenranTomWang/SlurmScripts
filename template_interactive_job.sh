@@ -1,0 +1,1 @@
+salloc --time=1:0:0 --mem-per-cpu=3G --ntasks=1
