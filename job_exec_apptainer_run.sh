@@ -13,4 +13,4 @@ export APPTAINER_CACHEDIR=/home/shenranw/scratch/cache/apptainer
 export MATCHA_TTS_CACHEDIR=/home/shenranw/scratch/cache/matcha_tts
 
 # remove --nv if you don't need a GPU
-apptainer run -C --nv --home /project/6080355/shenranw/home -B /project -B /scratch /project/6080355/shenranw/scripts/matcha_tts.sif bash /projects/6080355/shenranw/scripts/train.sh
+apptainer run -C --nv --home /project/6080355/shenranw/home -B /project -B /scratch /project/6080355/shenranw/scripts/matcha_tts.sif bash /project/6080355/shenranw/scripts/get_objiwe_stats.sh
