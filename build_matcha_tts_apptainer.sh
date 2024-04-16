@@ -14,4 +14,4 @@ export APPTAINER_CACHEDIR=~/scratch/cache/apptainer
 
 # install environment
 # please find your own environment from docker hub
-apptainer build macha_tts.sif docker://ubcslime/macha-tts
+apptainer build matcha_tts.sif docker://shenranw/matcha_tts:v1
