@@ -1,0 +1,1 @@
+python3 "matcha/utils/monotonic_align/setup.py" build_ext --inplace
