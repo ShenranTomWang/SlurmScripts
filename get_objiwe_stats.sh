@@ -1,3 +1,4 @@
-cd /project/6080355/shenranw/Matcha-TTS
-make clean
-python3 matcha/utils/generate_data_statistics.py -i ljspeech.yaml
+source .bashrc
+conda init
+conda activate /scratch/shenranw/llm/vllm_env
+python3 matcha/utils/generate_data_statistics.py -i objiwe.yaml

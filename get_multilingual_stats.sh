@@ -1,6 +1,4 @@
 source .bashrc
 conda init
 conda activate /scratch/shenranw/llm/vllm_env
-
-cd /project/6080355/shenranw/vocos
-python synthesis.py
+python3 matcha/utils/generate_data_statistics.py -i multilingual.yaml

@@ -1,1 +1,0 @@
-python3 "./matcha/train.py" experiment=objiwe # ckpt_path="./weights/checkpoint.ckpt"

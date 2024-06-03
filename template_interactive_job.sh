@@ -1,1 +1,1 @@
-salloc --time=1:0:0 --mem-per-cpu=3G --ntasks=1
+salloc --time=1:0:0 --mem-per-cpu=3G --ntasks=1 --gpus-per-node=v100l:1

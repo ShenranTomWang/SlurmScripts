@@ -14,4 +14,6 @@ export APPTAINER_CACHEDIR=~/scratch/cache/apptainer
 
 # install environment
 # please find your own environment from docker hub
-apptainer build matcha_tts_v1.sif docker://shenranw/matcha_tts:v1
+apptainer build llm_env.sif docker://pytorch/pytorch:2.2.1-cuda12.1-cudnn8-devel
+conda create -p /scratch/shenranw/llm/vllm_env --clone base
+apptainer run -C --nv --home /project/6080355/shenranw -B /project -B /scratch /project/6080355/shenranw/scripts/llm_env.sif bash /project/6080355/shenranw/scripts/setup_vocos_conda.sh.sh
