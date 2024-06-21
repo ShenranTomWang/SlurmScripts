@@ -1,0 +1,1 @@
+python "/project/6080355/shenranw/Matcha-TTS/synthesis.py"
