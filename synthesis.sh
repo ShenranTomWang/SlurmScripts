@@ -12,7 +12,7 @@ module load rust
 ENVDIR=/scratch/shenranw/matcha
 # virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
-export USE_MEMORY_EFFICIENT_ATTENTION=1
+# export USE_MEMORY_EFFICIENT_ATTENTION=1
 
 cd /project/6080355/shenranw/Matcha-TTS
 python synthesis.py
