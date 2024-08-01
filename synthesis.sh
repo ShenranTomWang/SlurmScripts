@@ -9,6 +9,7 @@
 module load StdEnv/2023
 module load python/3.10
 module load rust
+module load cudacore/.12.2.2
 ENVDIR=/scratch/shenranw/matcha
 # virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
