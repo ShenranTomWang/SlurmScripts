@@ -14,6 +14,13 @@ ENVDIR=/scratch/shenranw/matcha
 # virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
 # export USE_MEMORY_EFFICIENT_ATTENTION=1
+export BATCHED_SYNTHESIS=1
+export MATCHA_CHECKPOINT="./logs/train/monolingual/runs/mikmaw/checkpoints/last.ckpt"
+export WANDB_NAME="Mikmaw A100 Vocos epoch=last"
+export Y_FILELIST="./data/filelists/mikmaw_test_filelist.txt"
+export SPK_FLAG_MONOLINGUAL="AT"
+# export LANG_EMB=1
+# export SPK_EMB=1
 
 cd /project/6080355/shenranw/Matcha-TTS
 python synthesis.py
