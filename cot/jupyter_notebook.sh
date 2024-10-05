@@ -10,6 +10,8 @@
  
 ################################################################################
  
+export NOTEBOOK_HOME_DIR="/home/shenranw"
+
 # Change directory into the job dir
 cd $SLURM_SUBMIT_DIR
  
@@ -49,4 +51,4 @@ scancel ${SLURM_JOB_ID}
 END
  
 # Execute jupyter within the Apptainer container
-apptainer exec --home /scratch/st-jzhu71-1/shenranw/my_jupyter --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --notebook-dir=$SLURM_SUBMIT_DIR
+apptainer exec --home /scratch/st-jzhu71-1/shenranw/my_jupyter --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --notebook-dir=$NOTEBOOK_HOME_DIR
