@@ -29,7 +29,7 @@ export APPTAINERENV_JUPYTER_TOKEN=$(openssl rand -base64 15)
 readonly PORT=$(python -c 'import socket; s=socket.socket(); s.bind(("", 0)); print(s.getsockname()[1]); s.close()')
  
 # Print connection details to file
-cat > connection_${SLURM_JOB_ID}.txt <<END
+cat > /home/shenranw/connections/connection_${SLURM_JOB_ID}.txt <<END
  
 1. Create an SSH tunnel to Jupyter Notebooks from your local workstation using the following command:
  
