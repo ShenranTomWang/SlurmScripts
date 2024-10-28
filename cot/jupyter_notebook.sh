@@ -7,7 +7,8 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=10G
 #SBATCH --gpus=1
- 
+#SBATCH --constraint=gpu_mem_32
+
 ################################################################################
  
 export NOTEBOOK_HOME_DIR="/home/shenranw"
