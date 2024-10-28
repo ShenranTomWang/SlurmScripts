@@ -15,6 +15,6 @@ cd $JUPYTER_APPTAINER_DIR
 
 # install environment
 # please find your own environment from docker hub
-apptainer pull --name jupyter-datascience.sif docker://shenranw/cot:v1
+apptainer pull --name jupyter-datascience.sif docker://shenranw/cot:v2
 
 mkdir -p /scratch/st-jzhu71-1/shenranw/my_jupyter

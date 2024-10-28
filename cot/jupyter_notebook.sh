@@ -18,6 +18,7 @@ cd $SLURM_SUBMIT_DIR
 # Load software environment
 module load gcc
 module load apptainer
+module load http_proxy
  
 # Set RANDFILE location to writeable dir
 export RANDFILE=$TMPDIR/.rnd
