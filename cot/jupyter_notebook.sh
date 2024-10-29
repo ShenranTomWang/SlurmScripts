@@ -5,7 +5,7 @@
 #SBATCH --time=3-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --mem=10G
+#SBATCH --mem=32G
 #SBATCH --gpus=1
 #SBATCH --constraint=gpu_mem_32
 
@@ -53,4 +53,4 @@ scancel ${SLURM_JOB_ID}
 END
  
 # Execute jupyter within the Apptainer container
-apptainer exec --home /scratch/st-jzhu71-1/shenranw/my_jupyter --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --notebook-dir=$NOTEBOOK_HOME_DIR
+apptainer exec --nv --home /scratch/st-jzhu71-1/shenranw/my_jupyter --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --notebook-dir=$NOTEBOOK_HOME_DIR
