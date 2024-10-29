@@ -11,7 +11,7 @@
 
 ################################################################################
  
-export NOTEBOOK_HOME_DIR="/home/shenranw"
+export NOTEBOOK_HOME_DIR="/scratch/st-jzhu71-1/shenranw"
 
 # Change directory into the job dir
 cd $SLURM_SUBMIT_DIR
