@@ -15,6 +15,7 @@ source $ENVDIR/bin/activate
 export BATCH=0
 export START_IDX=0
 export MAX_IDX=-1
+export DATASET="fantasy_reasoning"
 
 cd /project/6080355/shenranw/CoT
 python ./data_collection.py
