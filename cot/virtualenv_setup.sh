@@ -8,6 +8,7 @@
 module load StdEnv/2023
 module load python/3.10
 module load rust
+module load arrow
 ENVDIR=/scratch/shenranw/cot     # change accordingly
 virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
