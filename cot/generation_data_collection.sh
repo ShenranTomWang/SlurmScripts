@@ -16,9 +16,9 @@ export INDEX=0
 export DATASET="fantasy_reasoning"
 
 cd /project/6080355/shenranw/CoT
-python ./data_collection.py
+python ./generation_data_collection.py
 
 export INDEX=0
 export DATASET="com2sense"
 
-python ./data_collection.py
+python ./generation_data_collection.py
