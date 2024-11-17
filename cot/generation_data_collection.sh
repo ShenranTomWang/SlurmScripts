@@ -1,5 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=1
+#SBATCH --gpus-per-node=a100:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=16G
 #SBATCH --time=10:00:00
@@ -11,9 +12,13 @@ ENVDIR=/scratch/shenranw/cot
 # virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
 
-export BATCH=2
-export DATASET="com2sense"
-export MODEL_NAME="gemma-2-2b-it"
+export INDEX=0
+export DATASET="fantasy_reasoning"
 
 cd /project/6080355/shenranw/CoT
-python ./data_processing.py
+python ./data_collection.py
+
+export INDEX=0
+export DATASET="com2sense"
+
+python ./data_collection.py
