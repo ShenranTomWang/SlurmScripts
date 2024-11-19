@@ -11,12 +11,14 @@ module load arrow
 ENVDIR=/scratch/shenranw/cot
 # virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
+cd /project/6080355/shenranw/Hallucination
 
 export START_IDX=0
 export MAX_IDX=-1
 export DATASET="TruthfulQA"
 export PROBE=1
-export DATASET="fantasy_reasoning"
 
-cd /project/6080355/shenranw/Hallucination
+python ./data_collection.py
+
+export PROBE=1
 python ./data_collection.py
