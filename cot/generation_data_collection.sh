@@ -12,7 +12,7 @@ ENVDIR=/scratch/shenranw/cot
 # virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
 
-export MODEL="gemma-2-2b"
+export MODEL="gemma-2-2b-it"
 
 export INDEX=0
 export DATASET="fantasy_reasoning"
