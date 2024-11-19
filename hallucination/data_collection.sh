@@ -14,7 +14,7 @@ source $ENVDIR/bin/activate
 cd /project/6080355/shenranw/Hallucination
 
 export START_IDX=0
-export MAX_IDX=-1
+export END_IDX=-1
 export DATASET="TruthfulQA"
 export PROBE=1
 
