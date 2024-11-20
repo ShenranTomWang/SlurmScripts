@@ -15,10 +15,10 @@ cd /project/6080355/shenranw/Hallucination
 
 export START_IDX=0
 export END_IDX=-1
-export DATASET="TruthfulQA"
+export DATASET="QAData"
 export PROBE=1
 
 python ./data_collection.py
 
-export PROBE=1
+export PROBE=0
 python ./data_collection.py
