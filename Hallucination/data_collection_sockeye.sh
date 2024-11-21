@@ -10,4 +10,4 @@
 #SBATCH --constraint=gpu_mem_32
 module load gcc
 module load apptainer
-apptainer run --nv --home /scratch/st-jzhu71-1/shenranw/my_jupyter --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif ./apptainer_run/data_collection.sh
+apptainer run --nv --home /scratch/st-jzhu71-1/shenranw/Hallucination --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif ./apptainer_run/data_collection.sh

@@ -1,3 +1,4 @@
+cd /scratch/st-jzhu71-1/shenranw/Hallucination
 export START_IDX=0
 export END_IDX=1000
 
