@@ -16,9 +16,9 @@ cd /project/6080355/shenranw/Hallucination
 export MODEL="/project/6080355/shenranw/CoT/models/google/gemma-2-2b-it"
 
 export START_IDX=0
-export END_IDX=1000
 
-export DATASET="QAData"
+export DATASET="TruthfulQA"
+export END_IDX=-1
 
 export PROBE=1
 python ./data_collection.py
@@ -26,8 +26,9 @@ python ./data_collection.py
 export PROBE=0
 python ./data_collection.py
 
-export DATASET="TruthfulQA"
-export END_IDX=-1
+export END_IDX=1000
+
+export DATASET="QAData"
 
 export PROBE=1
 python ./data_collection.py
