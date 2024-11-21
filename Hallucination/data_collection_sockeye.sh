@@ -11,6 +11,7 @@
 module load gcc
 module load apptainer
 
+export MODEL="/home/shenranw/CoT/models/google/gemma-2-2b-it"
 cd /scratch/st-jzhu71-1/shenranw/Hallucination
 export START_IDX=0
 export END_IDX=1000

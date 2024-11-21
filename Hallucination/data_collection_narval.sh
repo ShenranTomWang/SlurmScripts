@@ -13,6 +13,8 @@ ENVDIR=/scratch/shenranw/cot
 source $ENVDIR/bin/activate
 cd /project/6080355/shenranw/Hallucination
 
+export MODEL="/project/6080355/shenranw/CoT/models/google/gemma-2-2b-it"
+
 export START_IDX=0
 export END_IDX=1000
 
