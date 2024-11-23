@@ -17,4 +17,4 @@ export MODEL="gemma-2-2b-it"
 export STREAM="res"
 
 cd /project/6080355/shenranw/CoT
-python ./data_collection.py
+python ./data_collection_custom.py
