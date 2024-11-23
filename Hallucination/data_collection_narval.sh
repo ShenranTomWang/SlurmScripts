@@ -32,5 +32,5 @@ export DATASET="QAData"
 export PROBE=1
 python ./data_collection.py
 
-export PROBE=0
-python ./data_collection.py
+# export PROBE=0
+# python ./data_collection.py
