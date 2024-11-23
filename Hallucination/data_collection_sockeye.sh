@@ -15,12 +15,26 @@ export MODEL="/home/shenranw/CoT/models/google/gemma-2-2b-it"
 cd /scratch/st-jzhu71-1/shenranw/Hallucination
 export START_IDX=0
 export END_IDX=-1
-export DATASET="TruthfulQA"
+export DATASET="QAData"
 export PROBE=1
 apptainer run --nv --home /scratch/st-jzhu71-1/shenranw/Hallucination --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif python ./data_collection.py
 
 export START_IDX=0
 export END_IDX=-1
-export DATASET="TruthfulQA"
+export DATASET="QAData"
 export PROBE=0
 apptainer run --nv --home /scratch/st-jzhu71-1/shenranw/Hallucination --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif python ./data_collection.py
+
+# export MODEL="/home/shenranw/CoT/models/google/gemma-2-2b-it"
+# cd /scratch/st-jzhu71-1/shenranw/Hallucination
+# export START_IDX=0
+# export END_IDX=-1
+# export DATASET="TruthfulQA"
+# export PROBE=1
+# apptainer run --nv --home /scratch/st-jzhu71-1/shenranw/Hallucination --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif python ./data_collection.py
+
+# export START_IDX=0
+# export END_IDX=-1
+# export DATASET="TruthfulQA"
+# export PROBE=0
+# apptainer run --nv --home /scratch/st-jzhu71-1/shenranw/Hallucination --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR /home/shenranw/jupyter/jupyter-datascience.sif python ./data_collection.py
