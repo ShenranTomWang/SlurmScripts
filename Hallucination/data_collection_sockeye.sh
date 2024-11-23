@@ -2,7 +2,7 @@
  
 #SBATCH --job-name=my_jupyter_notebook
 #SBATCH --account=st-jzhu71-1-gpu
-#SBATCH --time=3-00:00:00
+#SBATCH --time=4-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=32G
