@@ -18,18 +18,18 @@ export MAX_IDX=-1
 export DATASET="fantasy_reasoning"
 
 cd /project/6080355/shenranw/CoT
-python ./data_collection.py
+python ./forward_with_hook.py
 
 export BATCH=0
 export START_IDX=0
 export MAX_IDX=900
 export DATASET="com2sense"
 
-python ./data_collection.py
+python ./forward_with_hook.py
 
 export BATCH=1
 export START_IDX=900
 export MAX_IDX=-1
 export DATASET="com2sense"
 
-python ./data_collection.py
+python ./forward_with_hook.py
