@@ -15,7 +15,7 @@ cd /project/6080355/shenranw/CoT
 
 export MODEL="gemma-2-2b-it"
 export STREAM="attn"
-export OUTPUT="./experimental_data/{MODEL}/custom_experiment_3/"
+export OUTPUT="./experimental_data/${MODEL}/custom_experiment_3/"
 
 export INPUT="Let's think step by step: True or false: Following the \"stay-at-home\" order, the CEO is likely to wear slippers more often than any other shoes even when at work."
 export FILENAME="generation_cot.txt"
