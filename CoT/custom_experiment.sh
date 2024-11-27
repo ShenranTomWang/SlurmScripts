@@ -3,7 +3,7 @@
 #SBATCH --gpus-per-node=a100:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=16G
-#SBATCH --time=2:00:00
+#SBATCH --time=1:00:00
 #SBATCH --account=def-lingjzhu
 module load StdEnv/2023
 module load rust
