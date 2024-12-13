@@ -14,3 +14,6 @@ virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
 pip install --no-index torch transformers sentencepiece pandas plotly nbformat tqdm
 pip install transformer_lens
+pip install tiktoken
+pip install protobuf
+pip install ninja einops triton packaging
