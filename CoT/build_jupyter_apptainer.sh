@@ -8,13 +8,13 @@
 module load gcc
 module load apptainer
 
-export JUPYTER_APPTAINER_DIR=/home/shenranw/jupyter
+export JUPYTER_APPTAINER_DIR=/scratch/st-jzhu71-1/shenranw/jupyter
 
 mkdir $JUPYTER_APPTAINER_DIR
 cd $JUPYTER_APPTAINER_DIR
 
 # install environment
 # please find your own environment from docker hub
-apptainer pull --force --name jupyter-datascience.sif docker://shenranw/cot:v2
+apptainer pull --force --name jupyter-datascience.sif docker://shenranw/cot:v4
 
 mkdir -p /scratch/st-jzhu71-1/shenranw/my_jupyter
