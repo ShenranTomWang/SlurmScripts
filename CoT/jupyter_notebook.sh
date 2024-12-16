@@ -21,7 +21,7 @@ module load gcc
 module load apptainer
 module load http_proxy
 
-export JUPYTER_APPTAINER_DIR=/scratch/st-jzhu71-1/shenranw/jupyter/jupyter-datascience.sif
+export JUPYTER_APPTAINER_DIR=/scratch/st-jzhu71-1/shenranw/envs/hymba.sif
 
 # Set RANDFILE location to writeable dir
 export RANDFILE=$TMPDIR/.rnd
