@@ -21,6 +21,7 @@ module load gcc
 module load apptainer
 module load http_proxy
 
+export APPTAINER_CACHEDIR=/scratch/st-jzhu71-1/shenranw/apptainer_cache
 export JUPYTER_APPTAINER_DIR=/scratch/st-jzhu71-1/shenranw/envs/hymba.sif
 
 # Set RANDFILE location to writeable dir

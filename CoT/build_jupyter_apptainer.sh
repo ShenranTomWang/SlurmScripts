@@ -8,6 +8,7 @@
 module load gcc
 module load apptainer
 
+export APPTAINER_CACHEDIR=/scratch/st-jzhu71-1/shenranw/apptainer_cache
 export JUPYTER_APPTAINER_DIR=/scratch/st-jzhu71-1/shenranw/jupyter
 
 mkdir $JUPYTER_APPTAINER_DIR
