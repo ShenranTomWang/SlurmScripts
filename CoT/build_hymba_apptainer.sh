@@ -9,7 +9,7 @@ module load gcc
 module load apptainer
 
 export APPTAINER_CACHEDIR=/scratch/st-jzhu71-1/shenranw/apptainer_cache
-export APPTAINER_DIR=/scratch/st-jzhu71-1/shenranw/envs
+export APPTAINER_DIR=/home/shenranw/envs
 
 mkdir $APPTAINER_DIR
 cd $APPTAINER_DIR
