@@ -11,7 +11,7 @@ module load cuda/12.4.0 intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc
 export ENVDIR=/scratch/st-jzhu71-1/shenranw/envs/CoT     # change accordingly
 source $ENVDIR/bin/activate
 
-export TRITON_CACHE_DIR="/scrach/st-jzhu71-1/shenranw/triton_cache"
+export TRITON_CACHE_DIR="/scratch/st-jzhu71-1/shenranw/triton_cache"
 export HF_HOME="/scratch/st-jzhu71-1/shenranw/transformers_cache"
 
 export INPUT="What is 103 times 202?"
