@@ -5,9 +5,9 @@
 #SBATCH --time=1-00:00
 #SBATCH --account=def-lingjzhu
 
-module load cuda/12.4.0 intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc py-virtualenv
+module load cuda/12.4.0 intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc
 export ENVDIR=/scratch/st-jzhu71-1/shenranw/envs/CoT     # change accordingly
-virtualenv --no-download $ENVDIR
+python -m venv $ENVDIR
 source $ENVDIR/bin/activate
 
 pip install torch sentencepiece pandas nbformat tqdm
