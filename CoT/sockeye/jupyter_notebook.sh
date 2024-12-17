@@ -17,12 +17,9 @@ export NOTEBOOK_HOME_DIR="/scratch/st-jzhu71-1/shenranw"
 cd $SLURM_SUBMIT_DIR
 
 # Load software environment
-module load gcc
-module load apptainer
-module load http_proxy
-
-export APPTAINER_CACHEDIR=/scratch/st-jzhu71-1/shenranw/apptainer_cache
-export JUPYTER_APPTAINER_DIR=/home/shenranw/envs/hymba.sif
+module load cuda/12.4.0 intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc
+export ENVDIR=/scratch/st-jzhu71-1/shenranw/envs/CoT     # change accordingly
+source $ENVDIR/bin/activate
 
 # Set RANDFILE location to writeable dir
 export RANDFILE=$TMPDIR/.rnd
@@ -56,4 +53,4 @@ scancel ${SLURM_JOB_ID}
 END
 
 # Execute jupyter within the Apptainer container
-apptainer exec --nv --fakeroot --home /scratch/st-jzhu71-1/shenranw/my_jupyter --env XDG_CACHE_HOME=$SLURM_SUBMIT_DIR $JUPYTER_APPTAINER_DIR jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --notebook-dir=$NOTEBOOK_HOME_DIR
+jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --notebook-dir=$NOTEBOOK_HOME_DIR
