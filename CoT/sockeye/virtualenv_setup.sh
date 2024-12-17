@@ -14,6 +14,7 @@ pip install torch sentencepiece pandas nbformat tqdm
 pip install transformer_lens tiktoken protobuf ninja einops triton packaging
 pip install notebook
 
+module load intel-oneapi-compilers/2023.1.0 python/3.11.6
 wget --header="Authorization: Bearer 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" https://huggingface.co/nvidia/Hymba-1.5B-Instruct/resolve/main/setup.sh
 bash setup.sh
 rm setup.sh
