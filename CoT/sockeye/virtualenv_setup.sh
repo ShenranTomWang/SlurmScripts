@@ -12,8 +12,9 @@ source $ENVDIR/bin/activate
 
 pip install torch sentencepiece pandas nbformat tqdm
 pip install transformer_lens tiktoken protobuf ninja einops triton packaging
-pip install notebook
+pip install notebook mamba-ssm wheel flash-attn causal-conv1d
 
-wget --header="Authorization: Bearer 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" https://huggingface.co/nvidia/Hymba-1.5B-Instruct/resolve/main/setup.sh
-bash setup.sh
-rm setup.sh
+git clone https://github.com/pytorch-labs/attention-gym.git
+cd attention-gym
+pip install .
+cd ..
