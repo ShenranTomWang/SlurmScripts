@@ -16,6 +16,6 @@ cd $APPTAINER_DIR
 
 # install environment
 # please find your own environment from docker hub
-apptainer pull --force --name hymba.sif docker://shenranw/cot:v6
+apptainer pull --force --name hymba.sif docker://shenranw/cot:v7
 
 mkdir -p /scratch/st-jzhu71-1/shenranw/my_jupyter
