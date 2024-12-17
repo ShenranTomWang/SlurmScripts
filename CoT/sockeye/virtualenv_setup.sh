@@ -5,8 +5,8 @@
 #SBATCH --time=1-00:00
 #SBATCH --account=def-lingjzhu
 
-module load cuda/12.4.0 python/3.8.10 gcc py-virtualenv
-ENVDIR=/scratch/st-jzhu71-1/shenranw/envs/CoT     # change accordingly
+module load cuda/12.4.0 intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc py-virtualenv
+export ENVDIR=/scratch/st-jzhu71-1/shenranw/envs/CoT     # change accordingly
 virtualenv --no-download $ENVDIR
 source $ENVDIR/bin/activate
 
@@ -14,7 +14,6 @@ pip install torch sentencepiece pandas nbformat tqdm
 pip install transformer_lens tiktoken protobuf ninja einops triton packaging
 pip install notebook
 
-module load intel-oneapi-compilers/2023.1.0 python/3.11.6
 wget --header="Authorization: Bearer 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" https://huggingface.co/nvidia/Hymba-1.5B-Instruct/resolve/main/setup.sh
 bash setup.sh
 rm setup.sh
