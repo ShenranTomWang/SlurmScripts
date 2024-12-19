@@ -17,6 +17,6 @@ export HF_HOME="/scratch/st-jzhu71-1/shenranw/transformers_cache"
 
 export DATASET="GSM8K"
 export MAX_IDX=200
-export MODEL="hymba-1.5b-instruct"
+export MODEL="gemma-2-2b-it"
 
 python ./generate.py
