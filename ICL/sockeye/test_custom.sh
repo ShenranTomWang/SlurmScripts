@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=ICL-Hymba
+#SBATCH --job-name=ICL-GPT2
 #SBATCH --account=st-jzhu71-1-gpu
 #SBATCH --time=7-00:00:00
 #SBATCH --nodes=1
@@ -12,11 +12,13 @@ module load intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc
 module load cuda/12.4.0
 export ENVDIR=/scratch/st-jzhu71-1/shenranw/envs/CoT     # change accordingly
 source $ENVDIR/bin/activate
-export MODEL="/scratch/st-jzhu71-1/shenranw/models/nvidia/Hymba-1.5B-Base"
 
 export TRITON_CACHE_DIR="/scratch/st-jzhu71-1/shenranw/triton_cache"
 export HF_HOME="/scratch/st-jzhu71-1/shenranw/transformers_cache"
 
+export MODEL="/scratch/st-jzhu71-1/shenranw/models/openai-community/gpt2"
+export OUT_DIR="out/gpt2"
+
 cd /scratch/st-jzhu71-1/shenranw/ICL
-python test_custom.py --model $MODEL --dataset sms_spam_random --out_dir out/gpt2/sms_spam_random --k 4
-python test_custom.py --model $MODEL --dataset sms_spam --out_dir out/gpt2/sms_spam --k 4
+python test_custom.py --model $MODEL --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4
+python test_custom.py --model $MODEL --dataset sms_spam --out_dir $OUT_DIR/sms_spam --k 4
