@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=my_jupyter_notebook
+#SBATCH --job-name=test_custom
 #SBATCH --account=st-jzhu71-1-gpu
 #SBATCH --time=3-00:00:00
 #SBATCH --nodes=1

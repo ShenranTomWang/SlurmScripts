@@ -1,1 +1,1 @@
-salloc --time=4:0:0 --mem-per-cpu=16G --ntasks=8 --nodes=1 --gpus=1 --constraint=gpu_mem_32 --account=st-jzhu71-1-gpu
+salloc --time=4:0:0 --mem-per-cpu=16G --ntasks=1 --nodes=1 --gpus=1 --constraint=gpu_mem_32 --account=st-jzhu71-1-gpu
