@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=ICL-GPT2
 #SBATCH --account=st-jzhu71-1-gpu
-#SBATCH --time=7-00:00:00
+#SBATCH --time=5:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=32G
@@ -20,5 +20,5 @@ export MODEL="/scratch/st-jzhu71-1/shenranw/models/openai-community/gpt2"
 export OUT_DIR="out/gpt2"
 
 cd /scratch/st-jzhu71-1/shenranw/ICL
-python test_custom.py --model $MODEL --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4
-python test_custom.py --model $MODEL --dataset sms_spam --out_dir $OUT_DIR/sms_spam --k 4
+python test_custom.py --model $MODEL --add_newlines --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4 --n_fwds 2
+python test_custom.py --model $MODEL --add_newlines --dataset sms_spam --out_dir $OUT_DIR/sms_spam --k 4 --n_fwds 2
