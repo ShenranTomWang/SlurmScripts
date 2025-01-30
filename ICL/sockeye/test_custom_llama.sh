@@ -20,5 +20,5 @@ export MODEL="/scratch/st-jzhu71-1/shenranw/models/meta-llama/Llama-3.2-1B"
 export OUT_DIR="out/Llama-3.2-1B"
 
 cd /scratch/st-jzhu71-1/shenranw/ICL
-python test_custom.py --model $MODEL --add_newlines --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4 --verbose
-python test_custom.py --model $MODEL --add_newlines --dataset sms_spam --out_dir $OUT_DIR/sms_spam --k 4 --verbose
+python test_custom.py --model $MODEL --add_newlines --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4
+python test_custom.py --model $MODEL --add_newlines --dataset sms_spam --out_dir $OUT_DIR/sms_spam --k 4

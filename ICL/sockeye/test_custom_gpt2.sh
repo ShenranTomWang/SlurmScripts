@@ -20,5 +20,5 @@ export MODEL="/scratch/st-jzhu71-1/shenranw/models/openai-community/gpt2"
 export OUT_DIR="out/gpt2"
 
 cd /scratch/st-jzhu71-1/shenranw/ICL
-python test_custom.py --model $MODEL --add_newlines --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4 --n_skips -1 --verbose
-python test_custom.py --model $MODEL --add_newlines --dataset sms_spam --out_dir $OUT_DIR/sms_spam --k 4 --n_skips -1 --verbose
+python test_custom.py --model $MODEL --add_newlines --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4 --n_skips -1
+python test_custom.py --model $MODEL --add_newlines --dataset sms_spam --out_dir $OUT_DIR/sms_spam --k 4 --n_skips -1
