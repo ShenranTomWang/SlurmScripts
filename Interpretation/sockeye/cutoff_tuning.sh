@@ -16,4 +16,4 @@ export TRITON_CACHE_DIR="/scratch/st-jzhu71-1/shenranw/triton_cache"
 export HF_HOME="/scratch/st-jzhu71-1/shenranw/transformers_cache"
 
 cd /scratch/st-jzhu71-1/shenranw/Interpretation
-python ./bbc_classification.py
+python ./cutoff_tuning.py --configs config/bbc_config.json --out_dir results/bbc_news/distilbert-bbc-news-classification
