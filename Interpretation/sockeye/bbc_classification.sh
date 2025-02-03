@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=ICL-gpt2
+#SBATCH --job-name=bbc_classification
 #SBATCH --account=st-jjnunez-1-gpu
 #SBATCH --time=5:00:00
 #SBATCH --nodes=1

@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=ICL-gpt2
+#SBATCH --job-name=cutoff_tuning
 #SBATCH --account=st-jjnunez-1-gpu
-#SBATCH --time=5:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=32G
@@ -16,4 +16,4 @@ export TRITON_CACHE_DIR="/scratch/st-jzhu71-1/shenranw/triton_cache"
 export HF_HOME="/scratch/st-jzhu71-1/shenranw/transformers_cache"
 
 cd /scratch/st-jzhu71-1/shenranw/Interpretation
-python ./cutoff_tuning.py --config configs/bbc_config.json --out_dir results/bbc_news/distilbert-bbc-news-classification
+python ./cutoff_tuning.py --config configs/bbc_config.json --out_dir results/bbc_news/distilbert-bbc-news-classification --cutoff_range 0.0001,0.01 --cutoff_step 0.00005
