@@ -25,7 +25,7 @@ python test_custom.py --model $MODEL --add_newlines --task class_to_class_random
 
 export MODEL="/scratch/st-jzhu71-1/shenranw/models/nvidia/Hymba-1.5B-Base"
 export OUT_DIR="out/Hymba-1.5B-Base"
-python test_custom.py --model $MODEL --add_newlines --task class_to_class -k 4 --n_skips 1
+python test_custom.py --model $MODEL --add_newlines --task class_to_class --k 4 --n_skips 1
 python test_custom.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --n_skips 1
 
 export MODEL="/scratch/st-jzhu71-1/shenranw/models/meta-llama/Llama-3.2-1B"
