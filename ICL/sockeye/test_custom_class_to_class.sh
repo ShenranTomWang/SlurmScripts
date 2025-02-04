@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=class_to_class
 #SBATCH --account=st-jzhu71-1-gpu
-#SBATCH --time=5:00:00
+#SBATCH --time=5-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=32G
