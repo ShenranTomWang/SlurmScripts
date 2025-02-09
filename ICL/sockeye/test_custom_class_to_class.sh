@@ -37,3 +37,8 @@ export MODEL="/scratch/st-jzhu71-1/shenranw/models/RWKV/v6-Finch-1B6-HF"
 export OUT_DIR="out/rwkv-v6-Finch-1B6-HF"
 python test_custom.py --model $MODEL --add_newlines --task class_to_class --k 4 --n_skips -1
 python test_custom.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --n_skips -1
+
+export MODEL="/scratch/st-jzhu71-1/shenranw/models/Qwen/Qwen2.5-1.5B"
+export OUT_DIR="out/Qwen2.5-1.5BF"
+python test_custom.py --model $MODEL --add_newlines --task class_to_class --k 4 --n_skips -1
+python test_custom.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --n_skips -1
