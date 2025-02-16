@@ -29,7 +29,7 @@ python extract_activations.py --model $MODEL --add_newlines --task class_to_clas
 python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR
 
 export MODEL="/scratch/st-jzhu71-1/shenranw/models/Qwen/Qwen2.5-1.5B"
-export OUT_DIR="out/Qwen2.5-1.5BF"
+export OUT_DIR="out/Qwen2.5-1.5B"
 python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR
 python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR
 
