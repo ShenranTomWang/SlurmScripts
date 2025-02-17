@@ -33,8 +33,8 @@ export OUT_DIR="out/Llama-3.2-1B"
 python test_custom.py --model $MODEL --add_newlines --task class_to_class --k 4
 python test_custom.py --model $MODEL --add_newlines --task class_to_class_random --k 4
 
-export MODEL="/scratch/st-jzhu71-1/shenranw/models/RWKV/v6-Finch-1B6-HF"
-export OUT_DIR="out/rwkv-v6-Finch-1B6-HF"
+export MODEL="/scratch/st-jzhu71-1/shenranw/models/RWKV/rwkv-6-world-1b6"
+export OUT_DIR="out/rwkv-6-world-1b6"
 python test_custom.py --model $MODEL --add_newlines --task class_to_class --k 4 --n_skips -1
 python test_custom.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --n_skips -1
 

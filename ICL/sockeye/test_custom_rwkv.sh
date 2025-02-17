@@ -16,8 +16,8 @@ source $ENVDIR/bin/activate
 export TRITON_CACHE_DIR="/scratch/st-jzhu71-1/shenranw/triton_cache"
 export HF_HOME="/scratch/st-jzhu71-1/shenranw/transformers_cache"
 
-export MODEL="/scratch/st-jzhu71-1/shenranw/models/RWKV/v6-Finch-1B6-HF"
-export OUT_DIR="out/rwkv-v6-Finch-1B6-HF"
+export MODEL="/scratch/st-jzhu71-1/shenranw/models/RWKV/rwkv-6-world-1b6"
+export OUT_DIR="out/rwkv-6-world-1b6"
 
 cd /scratch/st-jzhu71-1/shenranw/ICL
 python test_custom.py --model $MODEL --add_newlines --dataset sms_spam_random --out_dir $OUT_DIR/sms_spam_random --k 4 --n_skips -1
