@@ -6,8 +6,8 @@
 #SBATCH --time=8:00:00
 #SBATCH --account=def-lingjzhu
 
-module load intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc
-module load cuda/12.4.0
+module load arrow gcc
+module load cuda
 export ENVDIR=/scratch/shenranw/cot     # change accordingly
 source $ENVDIR/bin/activate
 
