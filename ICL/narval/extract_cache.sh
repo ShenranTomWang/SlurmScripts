@@ -6,10 +6,10 @@
 #SBATCH --time=8:00:00
 #SBATCH --account=def-lingjzhu
 
-module load gcc cuda
-module load arrow
 export ENVDIR=/scratch/shenranw/cot     # change accordingly
 source $ENVDIR/bin/activate
+module load gcc cuda
+module load arrow
 
 export TRITON_CACHE_DIR="/scratch/shenranw/triton_cache"
 export HF_HOME="/scratch/shenranw/transformers_cache"
