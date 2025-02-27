@@ -3,7 +3,7 @@
 #SBATCH --gpus-per-node=a100:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=16G
-#SBATCH --time=1:00:00
+#SBATCH --time=12:00:00
 #SBATCH --account=def-lingjzhu
 
 export ENVDIR=/scratch/shenranw/cot     # change accordingly
@@ -11,7 +11,7 @@ source $ENVDIR/bin/activate
 module load gcc cuda
 module load arrow
 
-export TRITON_CACHE_DIR="/scratch/shenranw/triton_cache"
+export TRITON_CACHE_DIR="/scratch/shenranw/triton_cache"S
 export HF_HOME="/scratch/shenranw/transformers_cache"
 
 cd /project/6080355/shenranw/ICL
