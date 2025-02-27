@@ -8,15 +8,15 @@
 #SBATCH --gpus=1
 #SBATCH --constraint=gpu_mem_32
 
-module load intel-oneapi-compilers/2023.1.0 python/3.11.6 gcc
-module load cuda/12.4.0
-export ENVDIR=/scratch/st-jzhu71-1/shenranw/envs/CoT     # change accordingly
+module load arrow gcc
+module load cuda
+export ENVDIR=/scratch/shenranw/cot     # change accordingly
 source $ENVDIR/bin/activate
 
-export TRITON_CACHE_DIR="/scratch/st-jzhu71-1/shenranw/triton_cache"
-export HF_HOME="/scratch/st-jzhu71-1/shenranw/transformers_cache"
+export TRITON_CACHE_DIR="/scratch/shenranw/triton_cache"
+export HF_HOME="/scratch/shenranw/transformers_cache"
 
-cd /scratch/st-jzhu71-1/shenranw/ICL
+cd /project/6080355/shenranw/ICL
 
 export MODEL="/scratch/st-jzhu71-1/shenranw/models/openai-community/gpt2"
 export OUT_DIR="out/gpt2"
