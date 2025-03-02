@@ -25,7 +25,7 @@ coolname==2.2.0
 cramjam==2.6.2+computecanada
 cryptography==42.0.8+computecanada
 cycler==0.12.1+computecanada
-datasets==3.3.2
+datasets==3.2.0
 debugpy==1.8.12+computecanada
 decorator==5.1.1+computecanada
 dill==0.3.8+computecanada
@@ -96,7 +96,7 @@ psutil==6.1.1+computecanada
 ptyprocess==0.7.0+computecanada
 pure_eval==0.2.3+computecanada
 py_cpuinfo==9.0.0+computecanada
-pyarrow @ file:///tmp/ebuser/avx2/Arrow/18.1.0/gcccorecuda-2023a/arrow/python
+pyarrow @ file:///tmp/ebuser/avx2/Arrow/19.0.1/GCCcore-12.3-gentoo/arrow/python
 pyarrow_hotfix==0.6+computecanada
 pycparser==2.22
 pygments==2.19.1+computecanada
