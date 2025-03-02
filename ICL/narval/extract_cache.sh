@@ -16,15 +16,15 @@ export HF_HOME="/scratch/shenranw/transformers_cache"
 
 cd /project/6080355/shenranw/ICL
 
-export MODEL="/scratch/shenranw/models/openai-community/gpt2"
-export OUT_DIR="out/gpt2"
-python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
-python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
+# export MODEL="/scratch/shenranw/models/openai-community/gpt2"
+# export OUT_DIR="out/gpt2"
+# python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
+# python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
 
-export MODEL="/scratch/shenranw/models/meta-llama/Llama-3.2-1B"
-export OUT_DIR="out/Llama-3.2-1B"
-python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
-python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
+# export MODEL="/scratch/shenranw/models/meta-llama/Llama-3.2-1B"
+# export OUT_DIR="out/Llama-3.2-1B"
+# python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
+# python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR --operator TransformerOperator --stream cache
 
 export MODEL="/scratch/shenranw/models/Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
