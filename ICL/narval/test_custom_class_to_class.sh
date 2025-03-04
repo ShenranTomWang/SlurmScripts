@@ -40,3 +40,13 @@ export MODEL="/scratch/shenranw/models/Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5BF"
 python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task class_to_class --k 4 --n_skips -1
 python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task class_to_class_random --k 4 --n_skips -1
+
+export MODEL="/scratch/shenranw/models/state-spaces/mamba-1.4b-hf"
+export OUT_DIR="out/mamba-1.4b-hf"
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --add_newlines --task class_to_class --k 4 --n_skips -1 --use_demo_cache
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --add_newlines --task class_to_class_random --k 4 --n_skips -1 --use_demo_cache
+
+export MODEL="/scratch/shenranw/models/Zyphra/Zamba2-1.2B"
+export OUT_DIR="out/Zamba2-1.2B"
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --add_newlines --task class_to_class --k 4 --n_skips 1 --use_demo_cache
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --add_newlines --task class_to_class_random --k 4 --n_skips 1 --use_demo_cache
