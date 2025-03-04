@@ -40,3 +40,13 @@ export MODEL="/scratch/shenranw/models/RWKV/rwkv-6-world-1b6"
 export OUT_DIR="out/rwkv-6-world-1b6"
 python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR --operator RWKVOperator --stream cache
 python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR --operator RWKVOperator --stream cache
+
+export MODEL="/scratch/shenranw/models/state-spaces/mamba-1.4b-hf"
+export OUT_DIR="out/mamba-1.4b-hf"
+python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR --operator MambaOperator --stream cache
+python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR --operator MambaOperator --stream cache
+
+export MODEL="/scratch/shenranw/models/Zyphra/Zamba2-1.2B"
+export OUT_DIR="out/Zamba2-1.2B"
+python extract_activations.py --model $MODEL --add_newlines --task class_to_class --k 4 --split demo --out_dir $OUT_DIR --operator ZambaOperator --stream cache
+python extract_activations.py --model $MODEL --add_newlines --task class_to_class_random --k 4 --split demo --out_dir $OUT_DIR --operator ZambaOperator --stream cache
