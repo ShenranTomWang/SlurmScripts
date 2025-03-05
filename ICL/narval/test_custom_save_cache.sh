@@ -3,7 +3,7 @@
 #SBATCH --gpus-per-node=a100:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=16G
-#SBATCH --time=12:00:00
+#SBATCH --time=5-00:00:00
 #SBATCH --account=def-lingjzhu
 
 export ENVDIR=/scratch/shenranw/cot     # change accordingly
@@ -40,11 +40,11 @@ export OUT_DIR="out/rwkv-6-world-1b6"
 python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator RWKVOperator --add_newlines --task class_to_class --k 4 --n_skips -1 --use_demo_cache --save_demo_cache
 python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator RWKVOperator --add_newlines --task class_to_class_random --k 4 --n_skips -1 --use_demo_cache --save_demo_cache
 
-export MODEL="/scratch/shenranw/models/Qwen/Qwen2.5-1.5B"
-export CACHE_DIR="out/Qwen2.5-1.5B"
-export OUT_DIR="out/Qwen2.5-1.5B"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task class_to_class --k 4 --n_skips -1 --use_demo_cache --save_demo_cache
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task class_to_class_random --k 4 --n_skips -1 --use_demo_cache --save_demo_cache
+# export MODEL="/scratch/shenranw/models/Qwen/Qwen2.5-1.5B"
+# export CACHE_DIR="out/Qwen2.5-1.5B"
+# export OUT_DIR="out/Qwen2.5-1.5B"
+# python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task class_to_class --k 4 --n_skips -1 --use_demo_cache --save_demo_cache
+# python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task class_to_class_random --k 4 --n_skips -1 --use_demo_cache --save_demo_cache
 
 export MODEL="/scratch/shenranw/models/state-spaces/mamba-1.4b-hf"
 export CACHE_DIR="out/mamba-1.4b-hf"
