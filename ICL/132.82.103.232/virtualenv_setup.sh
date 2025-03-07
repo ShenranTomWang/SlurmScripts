@@ -10,5 +10,6 @@ conda activate LLM
 
 cd ~/SlurmScripts/ICL/132.82.103.232
 
+conda install cmake
 pip install torch==2.5.1
 pip install -r ./requirements.txt
