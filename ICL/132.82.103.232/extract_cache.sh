@@ -10,7 +10,8 @@ conda activate LLM
 
 export TRITON_CACHE_DIR="/home/shenranw/triton_cache"
 export HF_HOME="/home/shenranw/transformers_cache"
-export DEVICE="cuda:3"
+export export CUDA_VISIBLE_DEVICES=3
+export DEVICE="cuda"
 
 cd /home/tomwang/ICL
 
