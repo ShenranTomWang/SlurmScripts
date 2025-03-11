@@ -21,8 +21,8 @@ python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator
 
 export MODEL="RWKV/rwkv-6-world-1b6"
 export OUT_DIR="out/rwkv-6-world-1b6"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator RWKVOperator --add_newlines --task analysis_classification --k 4 --n_skips -1 --use_demo_cache --device $DEVICE
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator RWKVOperator --add_newlines --task analysis_classification_random --k 4 --n_skips -1 --use_demo_cache --device $DEVICE
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator RWKVOperator --add_newlines --task analysis_classification --k 4 --n_skips -1 --device $DEVICE
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator RWKVOperator --add_newlines --task analysis_classification_random --k 4 --n_skips -1 --device $DEVICE
 
 export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5BF"
@@ -31,10 +31,10 @@ python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOp
 
 export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --add_newlines --task analysis_classification --k 4 --n_skips -1 --use_demo_cache --device $DEVICE
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --add_newlines --task analysis_classification_random --k 4 --n_skips -1 --use_demo_cache --device $DEVICE
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --add_newlines --task analysis_classification --k 4 --n_skips -1 --device $DEVICE
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --add_newlines --task analysis_classification_random --k 4 --n_skips -1 --device $DEVICE
 
 export MODEL="Zyphra/Zamba2-1.2B"
 export OUT_DIR="out/Zamba2-1.2B"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --add_newlines --task analysis_classification --k 4 --n_skips 1 --use_demo_cache --device $DEVICE
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --add_newlines --task analysis_classification_random --k 4 --n_skips 1 --use_demo_cache --device $DEVICE
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --add_newlines --task analysis_classification --k 4 --n_skips 1 --device $DEVICE
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --add_newlines --task analysis_classification_random --k 4 --n_skips 1 --device $DEVICE
