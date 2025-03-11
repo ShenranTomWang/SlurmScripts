@@ -8,8 +8,8 @@
 
 conda activate LLM
 
-export TRITON_CACHE_DIR="/home/shenranw/triton_cache"
-export HF_HOME="/home/shenranw/transformers_cache"
+export TRITON_CACHE_DIR="/home/tomwang/triton_cache"
+export HF_HOME="/home/tomwang/transformers_cache"
 export DEVICE="cuda:3"
 
 cd /home/tomwang/ICL
