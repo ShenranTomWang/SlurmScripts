@@ -31,8 +31,8 @@ python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator RWKVOperator 
 export MODEL="Qwen/Qwen2.5-1.5B"
 export CACHE_DIR="out/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task analysis_classification --k 4 --n_skips -1 --device $DEVICE --log_file "logs/Qwen2.5-1.5B/analysis_classification.log"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task analysis_classification_random --k 4 --n_skips -1 --device $DEVICE --log_file "logs/Qwen2.5-1.5B/analysis_classification_random.log"
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task analysis_classification --k 4 --n_skips -1 --use_demo_cache --save_demo_cache --device $DEVICE --log_file "logs/Qwen2.5-1.5B/analysis_classification.log"
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --add_newlines --task analysis_classification_random --k 4 --n_skips -1 --use_demo_cache --save_demo_cache --device $DEVICE --log_file "logs/Qwen2.5-1.5B/analysis_classification_random.log"
 
 export MODEL="state-spaces/mamba-1.4b-hf"
 export CACHE_DIR="out/mamba-1.4b-hf"
