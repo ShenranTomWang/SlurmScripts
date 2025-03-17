@@ -16,14 +16,14 @@ export HF_HOME="/scratch/st-jjnunez-1/shenranw/transformers_cache"
 
 cd /scratch/st-jjnunez-1/shenranw/Interpretation
 
-export CONFIG="configs/bbc_config.json"
 export MODEL="/scratch/st-jjnunez-1/shenranw/models/Umesh/distilbert-bbc-news-classification"
-python ./run.py --config $CONFIG --model $MODEL --multiclass huggingface
+python ./test.py --model $MODEL --data_path "data/bbc_news/distilbert-bbc-news-classification/test.tsv" --dataset "bbc_news"
 
-export CONFIG="configs/topics_classification-gpt2.json"
 export MODEL="/scratch/st-jjnunez-1/shenranw/models/openai-community/gpt2"
-python ./run.py --config $CONFIG --model $MODEL --multiclass llm_classifier_model --llm_classifier_config_dir "out/gpt2/config.json" --llm_classifier_dir "out/gpt2/classifier.pth"
+python ./test.py --model $MODEL --data_path "data/topics_classification/gpt2-topics-classification/test.tsv" --dataset "topics_classification"
 
-export CONFIG="configs/topics_classification-Llama-3.2-1B.json"
 export MODEL="/scratch/st-jjnunez-1/shenranw/models/meta-llama/Llama-3.2-1B"
-python ./run.py --config $CONFIG --model $MODEL --multiclass llm_classifier_model --llm_classifier_config_dir "out/Llama-3.2-1B/config.json" --llm_classifier_dir "out/Llama-3.2-1B/classifier.pth"
+python ./test.py --model $MODEL --data_path "data/topics_classification/Llama-3.2-1B-topics-classification/test.tsv" --dataset "topics_classification"
+
+export MODEL="/scratch/st-jjnunez-1/shenranw/models/valurank/distilroberta-topic-classification"
+python ./test.py --model $MODEL --data_path "data/topics_classification/distilroberta-topics-classification/test.tsv" --dataset "topics_classification"
