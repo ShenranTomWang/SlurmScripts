@@ -24,7 +24,9 @@ python extract_activations.py --model $MODEL --add_newlines --task analysis_clas
 export MODEL="nvidia/Hymba-1.5B-Base"
 export OUT_DIR="out/Hymba-1.5B-Base"
 python extract_activations.py --model $MODEL --add_newlines --task analysis_classification --k 4 --split demo --out_dir $OUT_DIR --operator HymbaOperator --stream attn --device $DEVICE
+python extract_activations.py --model $MODEL --add_newlines --task analysis_classification --k 4 --split demo --out_dir $OUT_DIR --operator HymbaOperator --stream attn_mean --device $DEVICE
 python extract_activations.py --model $MODEL --add_newlines --task analysis_classification_random --k 4 --split demo --out_dir $OUT_DIR --operator HymbaOperator --stream attn --device $DEVICE
+python extract_activations.py --model $MODEL --add_newlines --task analysis_classification_random --k 4 --split demo --out_dir $OUT_DIR --operator HymbaOperator --stream attn_mean --device $DEVICE
 
 export MODEL="RWKV/rwkv-6-world-1b6"
 export OUT_DIR="out/rwkv-6-world-1b6"
@@ -39,4 +41,6 @@ python extract_activations.py --model $MODEL --add_newlines --task analysis_clas
 export MODEL="Zyphra/Zamba2-1.2B"
 export OUT_DIR="out/Zamba2-1.2B"
 python extract_activations.py --model $MODEL --add_newlines --task analysis_classification --k 4 --split demo --out_dir $OUT_DIR --operator ZambaOperator --stream attn --device $DEVICE
+python extract_activations.py --model $MODEL --add_newlines --task analysis_classification --k 4 --split demo --out_dir $OUT_DIR --operator ZambaOperator --stream attn_mean --device $DEVICE
 python extract_activations.py --model $MODEL --add_newlines --task analysis_classification_random --k 4 --split demo --out_dir $OUT_DIR --operator ZambaOperator --stream attn --device $DEVICE
+python extract_activations.py --model $MODEL --add_newlines --task analysis_classification_random --k 4 --split demo --out_dir $OUT_DIR --operator ZambaOperator --stream attn_mean --device $DEVICE
