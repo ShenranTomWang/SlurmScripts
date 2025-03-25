@@ -1,11 +1,3 @@
-#!/bin/bash
-#SBATCH --nodes=1
-#SBATCH --gpus-per-node=a100:1
-#SBATCH --ntasks-per-node=1
-#SBATCH --mem=16G
-#SBATCH --time=12:00:00
-#SBATCH --account=def-lingjzhu
-
 conda activate LLM
 
 export TRITON_CACHE_DIR="/home/tomwang/triton_cache"
