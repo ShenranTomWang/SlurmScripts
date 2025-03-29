@@ -19,3 +19,5 @@ git clone https://github.com/pytorch-labs/attention-gym.git
 cd attention-gym
 pip install .
 cd ..
+
+pip install -r ./requirements.txt
