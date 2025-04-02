@@ -18,7 +18,11 @@ cd /scratch/st-jjnunez-1/shenranw/Interpretation
 
 export CONFIG="configs/bbc_config.json"
 export MODEL="/scratch/st-jjnunez-1/shenranw/models/Umesh/distilbert-bbc-news-classification"
-python ./run.py --config $CONFIG --model $MODEL --multiclass huggingface
+python ./run.py --config $CONFIG --model $MODEL --multiclass huggingface --model_class DistilBertBBCNewsClassifier
+
+export CONFIG="configs/topics_classification-distilroberta.json"
+export MODEL="/scratch/st-jjnunez-1/shenranw/models/valurank/distilroberta-topic-classification"
+python ./run.py --config $CONFIG --model $MODEL --multiclass huggingface --model_class DistilRobertaTopicsClassifier
 
 export CONFIG="configs/topics_classification-gpt2.json"
 export MODEL="/scratch/st-jjnunez-1/shenranw/models/openai-community/gpt2"
