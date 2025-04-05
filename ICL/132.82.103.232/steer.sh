@@ -31,3 +31,9 @@ export OUT_DIR="out/mamba-1.4b-hf"
 python steer.py --model $MODEL --dataset tweet_eval-hate --out_dir $OUT_DIR --load_dir $OUT_DIR --operator MambaOperator baseline
 python steer.py --model $MODEL --dataset tweet_eval-hate --out_dir $OUT_DIR --load_dir $OUT_DIR --operator MambaOperator intervene_direct --keep_scan --keep_attention
 python steer.py --model $MODEL --dataset tweet_eval-hate --out_dir $OUT_DIR --load_dir $OUT_DIR --operator MambaOperator intervene_diff --keep_scan --keep_attention
+
+export MODEL="AntonV/mamba2-1.3b-hf"
+export OUT_DIR="out/mamba2-1.3b-hf"
+python steer.py --model $MODEL --dataset tweet_eval-hate --out_dir $OUT_DIR --load_dir $OUT_DIR --operator Mamba2Operator baseline
+python steer.py --model $MODEL --dataset tweet_eval-hate --out_dir $OUT_DIR --load_dir $OUT_DIR --operator Mamba2Operator intervene_direct --keep_scan --keep_attention
+python steer.py --model $MODEL --dataset tweet_eval-hate --out_dir $OUT_DIR --load_dir $OUT_DIR --operator Mamba2Operator intervene_diff --keep_scan --keep_attention

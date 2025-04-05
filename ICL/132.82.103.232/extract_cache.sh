@@ -28,6 +28,11 @@ export OUT_DIR="out/mamba-1.4b-hf"
 python extract_activations.py --model $MODEL --task analysis_classification --k 4 --split demo --out_dir $OUT_DIR --operator MambaOperator --stream cache --device $DEVICE
 python extract_activations.py --model $MODEL --task analysis_classification_random --k 4 --split demo --out_dir $OUT_DIR --operator MambaOperator --stream cache --device $DEVICE
 
+export MODEL="AntonV/mamba2-1.3b-hf"
+export OUT_DIR="out/mamba2-1.3b-hf"
+python extract_activations.py --model $MODEL --task analysis_classification --k 4 --split demo --out_dir $OUT_DIR --operator Mamba2Operator --stream cache --device $DEVICE
+python extract_activations.py --model $MODEL --task analysis_classification_random --k 4 --split demo --out_dir $OUT_DIR --operator Mamba2Operator --stream cache --device $DEVICE
+
 export MODEL="Zyphra/Zamba2-1.2B"
 export OUT_DIR="out/Zamba2-1.2B"
 python extract_activations.py --model $MODEL --task analysis_classification --k 4 --split demo --out_dir $OUT_DIR --operator ZambaOperator --stream cache --device $DEVICE

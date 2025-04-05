@@ -20,6 +20,10 @@ export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
 python extract_activations.py --model $MODEL --dataset tweet_eval-hate --k 4 --split train --out_dir $OUT_DIR --operator MambaOperator --stream steer --device $DEVICE
 
+export MODEL="AntonV/mamba2-1.3b-hf"
+export OUT_DIR="out/mamba2-1.3b-hf"
+python extract_activations.py --model $MODEL --dataset tweet_eval-hate --k 4 --split train --out_dir $OUT_DIR --operator Mamba2Operator --stream steer --device $DEVICE
+
 export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
 python extract_activations.py --model $MODEL --dataset tweet_eval-hate --k 16 --split train --out_dir $OUT_DIR --operator TransformerOperator --stream steer --device $DEVICE
