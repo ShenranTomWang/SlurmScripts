@@ -22,12 +22,12 @@ python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator
 export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
 export LOG_DIR="logs/Qwen2.5-1.5B"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task rethink_demo --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task rethink_demo_0_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_0_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task rethink_demo_25_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_25_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task rethink_demo_50_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_50_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task rethink_demo_75_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_75_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task rethink_demo_random --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_random.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task rethink_demo --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task rethink_demo_0_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_0_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task rethink_demo_25_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_25_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task rethink_demo_50_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_50_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task rethink_demo_75_correct --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_75_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task rethink_demo_random --k 16 --device $DEVICE --log_file $LOG_DIR/rethink_demo/log_random.log
 
 export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"

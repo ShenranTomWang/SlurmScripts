@@ -23,13 +23,13 @@ python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator
 export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
 export LOG_DIR="logs/Qwen2.5-1.5B"
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task analysis_classification --k 0 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_no_demo.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task analysis_classification --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task analysis_classification_0_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_0_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task analysis_classification_25_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_25_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task analysis_classification_50_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_50_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task analysis_classification_75_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_75_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator TransformerOperator --task analysis_classification_random --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_random.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task analysis_classification --k 0 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_no_demo.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task analysis_classification --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task analysis_classification_0_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_0_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task analysis_classification_25_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_25_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task analysis_classification_50_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_50_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task analysis_classification_75_correct --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_75_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task analysis_classification_random --k 16 --device $DEVICE --log_file $LOG_DIR/analysis_classification/log_random.log
 
 export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
