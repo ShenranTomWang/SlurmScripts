@@ -3,7 +3,7 @@
 
 export TRITON_CACHE_DIR="/home/tomwang/triton_cache"
 export HF_HOME="/home/tomwang/transformers_cache"
-export export CUDA_VISIBLE_DEVICES=1
+export export CUDA_VISIBLE_DEVICES=0
 export DEVICE="cuda"
 export TOKENIZERS_PARALLELISM=false
 
@@ -30,6 +30,17 @@ python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator
 python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_50_correct --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
 python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_75_correct --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
 python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_random --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
+
+export MODEL="meta-llama/Llama-3.2-1B"
+export OUT_DIR="out/Llama-3.2-1B"
+export LOG_DIR="logs/Llama-3.2-1B"
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_no_demo.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_0_correct --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_0_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_25_correct --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_25_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_50_correct --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_75_correct --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_random --k 16 --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 
 export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
