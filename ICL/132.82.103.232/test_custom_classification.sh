@@ -3,13 +3,13 @@
 
 export TRITON_CACHE_DIR="/home/tomwang/triton_cache"
 export HF_HOME="/home/tomwang/transformers_cache"
-export export CUDA_VISIBLE_DEVICES=2
+export export CUDA_VISIBLE_DEVICES=0
 export DEVICE="cuda"
 export TOKENIZERS_PARALLELISM=false
 
 cd /home/tomwang/ICL
 
-export k=8
+export k=32
 
 export MODEL="nvidia/Hymba-1.5B-Base"
 export OUT_DIR="out/Hymba-1.5B-Base"
@@ -36,24 +36,24 @@ python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator
 export MODEL="meta-llama/Llama-3.2-1B"
 export OUT_DIR="out/Llama-3.2-1B"
 export LOG_DIR="logs/Llama-3.2-1B/$k"
-# python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_no_demo.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/log.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_0_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_0_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_25_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_25_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_50_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_75_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
+# python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_no_demo.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/log.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_0_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_0_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_25_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_25_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_50_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_75_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 
 export MODEL="google/gemma-3-1b-pt"
 export OUT_DIR="out/gemma-3-1b-pt"
 export LOG_DIR="logs/gemma-3-1b-pt/$k"
-# python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_no_demo.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/log.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_0_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_0_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_25_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_25_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_50_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_75_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
-python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator Llama3Operator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
+# python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_no_demo.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/log.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_0_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_0_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_25_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_25_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_50_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_75_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
+python test_custom.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 
 export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
