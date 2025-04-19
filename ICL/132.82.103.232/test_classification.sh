@@ -23,6 +23,8 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task
 python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
 
 export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
@@ -36,6 +38,8 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task
 python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
 
 export MODEL="meta-llama/Llama-3.2-1B"
 export OUT_DIR="out/Llama-3.2-1B"
@@ -49,6 +53,8 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransf
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
 
 export MODEL="google/gemma-3-1b-pt"
 export OUT_DIR="out/gemma-3-1b-pt"
@@ -62,6 +68,8 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransf
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
 
 export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
@@ -75,6 +83,8 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task
 python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
 
 export MODEL="AntonV/mamba2-1.3b-hf"
 export OUT_DIR="out/mamba2-1.3b-hf"
@@ -88,6 +98,8 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --tas
 python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
 
 export MODEL="Zyphra/Zamba2-1.2B"
 export OUT_DIR="out/Zamba2-1.2B"
@@ -101,3 +113,5 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
