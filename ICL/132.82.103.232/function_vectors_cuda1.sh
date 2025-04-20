@@ -11,4 +11,4 @@ cd /home/tomwang/ICL
 
 export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
-python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task function_vectors_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task function_vectors_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
