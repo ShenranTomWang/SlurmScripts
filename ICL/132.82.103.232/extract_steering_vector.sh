@@ -26,4 +26,8 @@ python extract_activations.py --model $MODEL --dataset tweet_eval-hate --k 4 --s
 
 export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
-python extract_activations.py --model $MODEL --dataset tweet_eval-hate --k 16 --split train --out_dir $OUT_DIR --operator TransformerOperator --stream steer --device $DEVICE
+python extract_activations.py --model $MODEL --dataset tweet_eval-hate --k 16 --split train --out_dir $OUT_DIR --operator Qwen2Operator --stream steer --device $DEVICE
+
+export MODEL="meta-llama/Llama-3.2-1B"
+export OUT_DIR="out/Llama-3.2-1B"
+python extract_activations.py --model $MODEL --dataset tweet_eval-hate --k 16 --split train --out_dir $OUT_DIR --operator LlamaOperator --stream steer --device $DEVICE
