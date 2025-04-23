@@ -13,3 +13,12 @@ export MODEL="Qwen/Qwen2.5-1.5B"
 export OUT_DIR="out/Qwen2.5-1.5B"
 python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task function_vectors_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_random --load_dir $OUT_DIR
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task function_vectors_original_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
+python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_original_random --load_dir $OUT_DIR
+
+export MODEL="meta-llama/Llama-3.2-1B"
+export OUT_DIR="out/Llama-3.2-1B"
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task function_vectors_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
+python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_random --load_dir $OUT_DIR
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task function_vectors_original_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
+python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_original_random --load_dir $OUT_DIR

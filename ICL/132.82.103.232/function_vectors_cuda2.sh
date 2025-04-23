@@ -13,8 +13,12 @@ export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
 python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task function_vectors_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_random --load_dir $OUT_DIR
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task function_vectors_original_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
+python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_original_random --load_dir $OUT_DIR
 
 export MODEL="AntonV/mamba2-1.3b-hf"
 export OUT_DIR="out/mamba2-1.3b-hf"
 python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task function_vectors_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_random --load_dir $OUT_DIR
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task function_vectors_original_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
+python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_original_random --load_dir $OUT_DIR
