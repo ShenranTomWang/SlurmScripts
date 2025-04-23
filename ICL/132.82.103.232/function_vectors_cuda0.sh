@@ -13,5 +13,5 @@ export MODEL="nvidia/Hymba-1.5B-Base"
 export OUT_DIR="out/Hymba-1.5B-Base"
 python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_random --load_dir $OUT_DIR
-python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 --use_template AIE
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_original_random --load_dir $OUT_DIR
