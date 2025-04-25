@@ -59,16 +59,16 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task
 export MODEL="google/gemma-3-1b-pt"
 export OUT_DIR="out/gemma-3-1b-pt"
 export LOG_DIR="logs/gemma-3-1b-pt/$k"
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_no_demo.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/log.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_0_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_0_correct.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_25_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_25_correct.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_50_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_75_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
-# python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/log.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_0_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_0_correct.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_25_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_25_correct.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_50_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_50_correct.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_75_correct --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_75_correct.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_random_english_words --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_random_english_words_no_demo.log
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_incorrect_mapping --k 0 --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping_no_demo.log
 python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task classification_incorrect_mapping --k $k --device $DEVICE --log_file $LOG_DIR/classification/log_incorrect_mapping.log
 
 export MODEL="state-spaces/mamba-1.4b-hf"
