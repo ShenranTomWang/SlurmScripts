@@ -15,5 +15,5 @@ python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOpe
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_random --load_dir $OUT_DIR
 python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 --use_template AIE
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_original_random --load_dir $OUT_DIR
-python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original_incorrect_mapping --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 --use_template AIE
-python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_original_incorrect_mapping --load_dir $OUT_DIR
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_incorrect_mapping --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 --use_template AIE
+python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task function_vectors_incorrect_mapping --load_dir $OUT_DIR
