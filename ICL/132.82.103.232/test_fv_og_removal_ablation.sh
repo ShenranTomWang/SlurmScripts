@@ -27,11 +27,6 @@ export OUT_DIR="out/Llama-3.2-1B"
 export LOG_DIR="logs/Llama-3.2-1B/$k"
 python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original_removal_ablation/$p/log.log --ablate_top_p_heads $p
 
-export MODEL="google/gemma-3-1b-pt"
-export OUT_DIR="out/gemma-3-1b-pt"
-export LOG_DIR="logs/gemma-3-1b-pt/$k"
-python test.py --model $MODEL --out_dir $OUT_DIR --operator ForwardWrapperTransformerOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original_removal_ablation/$p/log.log --ablate_top_p_heads $p
-
 export MODEL="state-spaces/mamba-1.4b-hf"
 export OUT_DIR="out/mamba-1.4b-hf"
 export LOG_DIR="logs/mamba-1.4b-hf/$k"
