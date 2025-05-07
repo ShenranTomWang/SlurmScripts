@@ -40,4 +40,4 @@ python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --tas
 export MODEL="Zyphra/Zamba2-1.2B"
 export OUT_DIR="out/Zamba2-1.2B"
 export LOG_DIR="logs/Zamba2-1.2B/$k"
-python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_removal_ablation/$p/log_0_correct.log --ablate_top_p_heads $p
+python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_removal_ablation/$p/log.log --ablate_top_p_heads $p
