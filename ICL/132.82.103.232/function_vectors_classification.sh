@@ -36,5 +36,5 @@ python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task classification_ran
 
 export MODEL="Zyphra/Zamba2-1.2B"
 export OUT_DIR="out/Zamba2-1.2B"
-python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 --use_template AIE
+python function_vectors.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification_random --device $DEVICE --fv_load_dir $OUT_DIR --seed 100 AIE
 python ./visualize_fv.py --out_dir $OUT_DIR --seed 100 --task classification_random --load_dir $OUT_DIR
