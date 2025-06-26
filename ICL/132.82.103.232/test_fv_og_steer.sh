@@ -15,6 +15,10 @@ do
     export LOG_DIR="logs/Hymba-1.5B-Base/$k"
     python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo.log steer --p $p
     python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo_mean.log steer --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo.log steer --p $p --stream attn
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo_mean.log steer --p $p --mean_pool --stream attn
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo.log steer --p $p --stream scan
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo_mean.log steer --p $p --mean_pool --stream scan
 
     export MODEL="Qwen/Qwen2.5-1.5B"
     export OUT_DIR="out/Qwen2.5-1.5B"
@@ -45,4 +49,8 @@ do
     export LOG_DIR="logs/Zamba2-1.2B/$k"
     python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo.log steer --p $p
     python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo_mean.log steer --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo.log steer --p $p --stream attn
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo_mean.log steer --p $p --mean_pool --stream attn
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo.log steer --p $p --stream scan
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task function_vectors_original --k 0 --device $DEVICE --log_file $LOG_DIR/function_vectors_original/steer/$p/log_no_demo_mean.log steer --p $p --mean_pool --stream scan
 done
