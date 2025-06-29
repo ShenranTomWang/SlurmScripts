@@ -28,6 +28,18 @@ do
     python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log.log exclusion_zero_ablation --p $p --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_scan.log exclusion_zero_ablation --p $p --stream scan --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_attn.log exclusion_zero_ablation --p $p --stream attn --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean.log zero_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean_scan.log zero_ablation --p $p --stream scan --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mena_attn.log zero_ablation --p $p --stream attn --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean.log mean_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean_scan.log mean_ablation --p $p --stream scan --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean_attn.log mean_ablation --p $p --stream attn --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean.log exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean_scan.log exclusion_mean_ablation --p $p --stream scan --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean_attn.log exclusion_mean_ablation --p $p --stream attn --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean.log exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean_scan.log exclusion_zero_ablation --p $p --stream scan --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator HymbaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean_attn.log exclusion_zero_ablation --p $p --stream attn --exclude_p 0.2 --mean_pool
 
     export MODEL="Qwen/Qwen2.5-1.5B"
     export OUT_DIR="out/Qwen2.5-1.5B"
@@ -36,6 +48,10 @@ do
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log.log mean_ablation --p $p
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log.log exclusion_mean_ablation --p $p --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log.log exclusion_zero_ablation --p $p --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean.log zero_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean.log mean_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean.log exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean.log exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
 
     export MODEL="meta-llama/Llama-3.2-1B"
     export OUT_DIR="out/Llama-3.2-1B"
@@ -44,6 +60,10 @@ do
     python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log.log mean_ablation --p $p
     python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log.log exclusion_mean_ablation --p $p --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log.log exclusion_zero_ablation --p $p --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean.log zero_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean.log mean_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean.log exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator LlamaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean.log exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
 
     export MODEL="state-spaces/mamba-1.4b-hf"
     export OUT_DIR="out/mamba-1.4b-hf"
@@ -52,6 +72,10 @@ do
     python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log.log mean_ablation --p $p
     python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log.log exclusion_mean_ablation --p $p --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log.log exclusion_zero_ablation --p $p --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean.log zero_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean.log mean_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean.log exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator MambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean.log exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
 
     export MODEL="AntonV/mamba2-1.3b-hf"
     export OUT_DIR="out/mamba2-1.3b-hf"
@@ -60,6 +84,10 @@ do
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log.log mean_ablation --p $p
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log.log exclusion_mean_ablation --p $p --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log.log exclusion_zero_ablation --p $p --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean.log zero_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean.log mean_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean.log exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator Mamba2Operator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean.log exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
 
     export MODEL="Zyphra/Zamba2-1.2B"
     export OUT_DIR="out/Zamba2-1.2B"
@@ -76,4 +104,16 @@ do
     python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log.log exclusion_zero_ablation --p $p --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_scan.log exclusion_zero_ablation --p $p --stream scan --exclude_p 0.2
     python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_attn.log exclusion_zero_ablation --p $p --stream attn --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean.log zero_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean_scan.log zero_ablation --p $p --stream scan --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/zero_ablation/$p/log_mean_attn.log zero_ablation --p $p --stream attn --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean.log mean_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean_scan.log mean_ablation --p $p --stream scan --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/mean_ablation/$p/log_mean_attn.log mean_ablation --p $p --stream attn --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean.log exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean_scan.log exclusion_mean_ablation --p $p --stream scan --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_mean_ablation/$p/log_mean_attn.log exclusion_mean_ablation --p $p --stream attn --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean.log exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean_scan.log exclusion_zero_ablation --p $p --stream scan --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator ZambaOperator --task classification --k $k --device $DEVICE --log_file $LOG_DIR/classification/exclusion_zero_ablation/$p/log_mean_attn.log exclusion_zero_ablation --p $p --stream attn --exclude_p 0.2 --mean_pool
 done
