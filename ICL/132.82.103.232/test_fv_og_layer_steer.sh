@@ -12,7 +12,7 @@ export MODEL="nvidia/Hymba-1.5B-Base"
 python layer_steer.py --model $MODEL --operator HymbaOperator --task function_vectors_original --device $DEVICE --mean_pool
 
 export MODEL="Qwen/Qwen2.5-1.5B"
-python layer_steer.py --model $MODEL --operator QwenOperator --task function_vectors_original --device $DEVICE --mean_pool
+python layer_steer.py --model $MODEL --operator Qwen2Operator --task function_vectors_original --device $DEVICE --mean_pool
 
 export MODEL="meta-llama/Llama-3.2-1B"
 python layer_steer.py --model $MODEL --operator LlamaOperator --task function_vectors_original --device $DEVICE --mean_pool
