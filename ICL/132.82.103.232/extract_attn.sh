@@ -37,3 +37,8 @@ export MODEL="meta-llama/Llama-3.2-1B"
 export OUT_DIR="out/Llama-3.2-1B"
 python extract_activations.py --model $MODEL --task classification --k 16 --split dev --out_dir $OUT_DIR --operator LlamaOperator --device $DEVICE attn_mean
 python extract_activations.py --model $MODEL --task function_vectors_original --k 16 --split dev --out_dir $OUT_DIR --operator LlamaOperator --device $DEVICE attn_mean
+
+export MODEL="Qwen/Qwen2.5-1.5B"
+export OUT_DIR="out/Qwen2.5-1.5B"
+python extract_activations.py --model $MODEL --task classification --k 16 --split dev --out_dir $OUT_DIR --operator GPTNeoXOperator --device $DEVICE attn_mean
+python extract_activations.py --model $MODEL --task function_vectors_original --k 16 --split dev --out_dir $OUT_DIR --operator GPTNeoXOperator --device $DEVICE attn_mean
