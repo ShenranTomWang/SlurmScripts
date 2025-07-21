@@ -43,3 +43,9 @@ export OUT_DIR="out/Llama-3.2-1B"
 python extract_activations.py --model $MODEL --task classification --k -1 --split dev --out_dir $OUT_DIR --operator LlamaOperator --device $DEVICE fv_steer
 python extract_activations.py --model $MODEL --task function_vectors_original --k -1 --split dev --out_dir $OUT_DIR --operator LlamaOperator --device $DEVICE --use_template fv_steer
 python extract_activations.py --model $MODEL --task function_vectors_incorrect_mapping --k -1 --split dev --out_dir $OUT_DIR --operator LlamaOperator --device $DEVICE fv_steer
+
+export MODEL="EleutherAI/pythia-1B"
+export OUT_DIR="out/pythia-1B"
+python extract_activations.py --model $MODEL --task classification --k -1 --split dev --out_dir $OUT_DIR --operator GPTNeoXOperator --device $DEVICE fv_steer
+python extract_activations.py --model $MODEL --task function_vectors_original --k -1 --split dev --out_dir $OUT_DIR --operator GPTNeoXOperator --device $DEVICE --use_template fv_steer
+python extract_activations.py --model $MODEL --task function_vectors_incorrect_mapping --k -1 --split dev --out_dir $OUT_DIR --operator GPTNeoXOperator --device $DEVICE fv_steer

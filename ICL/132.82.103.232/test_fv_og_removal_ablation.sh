@@ -53,6 +53,18 @@ do
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/exclusion_mean_ablation/$p/log_mean.log --use_template exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
     python test.py --model $MODEL --out_dir $OUT_DIR --operator Qwen2Operator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/exclusion_zero_ablation/$p/log_mean.log --use_template exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
 
+    export MODEL="EleutherAI/pythia-1B"
+    export OUT_DIR="out/pythia-1B"
+    export LOG_DIR="logs/pythia-1B/$k"
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/zero_ablation/$p/log.log --use_template zero_ablation --p $p
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/mean_ablation/$p/log.log --use_template mean_ablation --p $p
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/exclusion_mean_ablation/$p/log.log --use_template exclusion_mean_ablation --p $p --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/exclusion_zero_ablation/$p/log.log --use_template exclusion_zero_ablation --p $p --exclude_p 0.2
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/zero_ablation/$p/log_mean.log --use_template zero_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/mean_ablation/$p/log_mean.log --use_template mean_ablation --p $p --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/exclusion_mean_ablation/$p/log_mean.log --use_template exclusion_mean_ablation --p $p --exclude_p 0.2 --mean_pool
+    python test.py --model $MODEL --out_dir $OUT_DIR --operator GPTNeoXOperator --task function_vectors_original --k $k --device $DEVICE --log_file $LOG_DIR/function_vectors_original/exclusion_zero_ablation/$p/log_mean.log --use_template exclusion_zero_ablation --p $p --exclude_p 0.2 --mean_pool
+
     export MODEL="meta-llama/Llama-3.2-1B"
     export OUT_DIR="out/Llama-3.2-1B"
     export LOG_DIR="logs/Llama-3.2-1B/$k"
